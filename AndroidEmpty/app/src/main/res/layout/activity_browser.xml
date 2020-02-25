@@ -6,27 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundWhite"
-    tools:context=".BrowserActivity">
+    tools:context=".BrowserNavigatorActivity">
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
+        android:id="@+id/browserPager"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Main content -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:background="@color/tabsBackground"
-        app:itemIconTint="@color/backgroundWhite"
-        app:itemTextColor="@color/tab_text_color"
-        app:itemTextAppearanceActive="@style/text_navigation_active_labels"
-        app:itemIconSize="0dp"
-        app:menu="@menu/bottom_navigation_menu"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/browserMQTTButton"
+            style="@android:style/Widget.Material.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="selectKnown"
+            android:text="@string/browserMQTTButton"
+            android:textColor="@color/tabsActiveLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/browserBLEButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/browserBLEButton"
+            style="@android:style/Widget.Material.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="selectNearby"
+            android:text="@string/browserBLEButton"
+            android:textColor="@color/tabsInactiveLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/browserDemoButton"
+            app:layout_constraintStart_toEndOf="@+id/browserMQTTButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/browserDemoButton"
+            style="@android:style/Widget.Material.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:onClick="selectDemo"
+            android:text="@string/browserDemoButton"
+            android:textColor="@color/tabsInactiveLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/browserBLEButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
