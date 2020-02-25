@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    You could add icons to these as well and they would just show up -->
+    <item
+        android:id="@+id/navigationKnown"
+        android:icon="@android:color/transparent"
+        android:title="Known" />
+    <item
+        android:id="@+id/navigationNearby"
+        android:icon="@android:color/transparent"
+        android:title="Nearby" />
+    <item
+        android:id="@+id/navigationDemo"
+        android:icon="@android:color/transparent"
+        android:title="Demo" />
+</menu>

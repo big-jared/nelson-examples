@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidEmpty</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="browserMQTTButton">Known</string>
+    <string name="browserDemoButton">Demo</string>
+    <string name="browserBLEButton">Nearby</string>
+    <string name="browserDemoResumeButton">RESUME</string>
+    <string name="browserDemoResetButton">RESET</string>
+    <string name="browserDemoButtonSeparator">OR</string>
+    <string name="twig_logo">twiɢ logo</string>
+</resources>
